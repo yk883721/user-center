@@ -3,6 +3,8 @@ package com.yk.usercenter.model.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
+import java.util.Date;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -45,6 +47,5 @@ public class User {
 
     @ApiModelProperty("积分")
     private Integer bonus;
-
 
 }

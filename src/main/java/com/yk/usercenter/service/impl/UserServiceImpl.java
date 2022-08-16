@@ -2,7 +2,7 @@ package com.yk.usercenter.service.impl;
 
 import com.yk.usercenter.model.entity.User;
 import com.yk.usercenter.mapper.UserMapper;
-import com.yk.usercenter.service.IUserService;
+import com.yk.usercenter.service.UserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2022-08-16
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
 
 }

@@ -32,14 +32,15 @@ public class Generator {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, resourcePath)); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
-
-                    builder.addInclude("bonus_event_log")
-
+                    builder.addInclude("user")
+                            .controllerBuilder()
+                                .enableRestStyle()
+                            .serviceBuilder()
+                                .formatServiceFileName("%sService")
                             .mapperBuilder()
                                 .enableBaseResultMap()
                                 .enableMapperAnnotation()
                                 .enableBaseColumnList()
-
                             .entityBuilder()
                                 .enableLombok()
                                 .disableSerialVersionUID()
