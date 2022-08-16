@@ -11,8 +11,8 @@ import org.springframework.stereotype.Service;
  * 分享 服务实现类
  * </p>
  *
- * @author auther
- * @since 2022-08-14
+ * @author yangk
+ * @since 2022-08-16
  */
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {

@@ -2,6 +2,7 @@ package com.yk.usercenter.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,7 +11,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 分享
+ * 积分变更记录表
  * </p>
  *
  * @author yangk
@@ -18,33 +19,28 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@ApiModel(value = "User对象", description = "分享")
-public class User {
+@TableName("bonus_event_log")
+@ApiModel(value = "BonusEventLog对象", description = "积分变更记录表")
+public class BonusEventLog {
 
     @ApiModelProperty("Id")
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    @ApiModelProperty("微信id")
-    private String wxId;
+    @ApiModelProperty("user.id")
+    private Integer userId;
 
-    @ApiModelProperty("微信昵称")
-    private String wxNickname;
+    @ApiModelProperty("积分操作值")
+    private Integer value;
 
-    @ApiModelProperty("角色")
-    private String roles;
-
-    @ApiModelProperty("头像地址")
-    private String avatarUrl;
+    @ApiModelProperty("发生的事件")
+    private String event;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty("修改时间")
-    private LocalDateTime updateTime;
-
-    @ApiModelProperty("积分")
-    private Integer bonus;
+    @ApiModelProperty("描述")
+    private String description;
 
 
 }
